@@ -1,17 +1,30 @@
-function add(n1: number, n2: number, showResult: boolean) {
-    if(showResult) {
-        console.log(n1+n2);
-    } else {
-        return n1+n2;
-    }
-    
+// const person: {
+//     name: string;
+//     age: number;
+// } = 
+
+enum Author {NEW, EXP, NOVICE, MASTER}
+
+// for tuple we need to explisitly setup
+// role: [string, number]; by type
+
+const person = {
+    name: "Srinivas",
+    age: 30,
+    hobbies: ['Sports', 'Cooking'],
+    val: Author.MASTER
 }
 
-const num1 = 5;
-const num2 = 5.9;
-const printResult = true;
-const output = "Output";
+console.log(person.name);
+
+for(const hobby of person.hobbies) {
+    console.log(hobby.toUpperCase());
+
+    if(person.val === Author.NEW) {
+        console.log("New User");
+    } else {
+        console.log("Advanced User")
+    }
+}
 
 
-const val = add(num1, num2, printResult);
-console.log(val);
